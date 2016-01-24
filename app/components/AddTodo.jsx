@@ -8,7 +8,9 @@ export default class AddTodo extends React.Component {
   }
 
   handleClick() {
-    this.props.onAdd(this.refs.text.value);
+    this.props.onAdd({
+      text: this.refs.text.value
+    });
   }
 
   render() {

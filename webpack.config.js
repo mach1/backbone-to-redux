@@ -11,6 +11,13 @@ module.exports = {
     publicPath: "/static/",
     filename: "bundle.js"
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    })
+  ],
   module: {
     loaders: [
       { test: /\.js[x]?$/, exclude: /node_modules/, loaders: ['react-hot', 'babel'] },
