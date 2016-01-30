@@ -1,9 +1,9 @@
 import React from 'react';
-import Todos from '../components/Todos.jsx';
-import * as TodoActions from '../actions/todos.js';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import Todos from '../components/Todos.jsx';
 import AddTodo from '../components/AddTodo.jsx';
+import * as TodoActions from '../actions/todos.js';
 
 class App extends React.Component {
   render() {
@@ -33,4 +33,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
-
